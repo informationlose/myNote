@@ -1,0 +1,35 @@
+Android学习
+所有activity均需要在AndroidManifest.xml中申明
+@文件名/资源名 可以调用相对应的资源，图片和文字都可以如此
+布局
+	属性介绍：
+		layout_width/layout_height:宽和高，一般单位为dp，可以使用match_parent来继承父类的大小，也有wrap_content表示随内容而变化
+		layout_weight:权重，直接以权重分配剩余空间
+		gravity:内容的对齐方式
+	各种类型布局介绍：
+		线性布局：
+			将控件按水平（horizontal）或垂直（vertical）排列
+			在orientation中设置是按水平还是垂直排列
+		相对布局：
+			相对于其他控件的位置排列
+		绝对布局：
+			以坐标系的形式放置控件，是以像素点的位置
+		表格布局：
+			用表格形式布局
+		网格布局：
+			更为细化的表格布局方式，4.0后支持
+控件介绍
+	控件需要在Java代码中声明
+	View：
+		所有控件的父类，相当于HTML中的DIV
+	TextView：
+		用于显示文字
+		text：需要显示的文字，可以引用values下定义好的文字资源（@values下文件名/具体的id号）
+		maxLines：最大行数
+		ellipsize：设置省略号，在末尾要用end
+		drawableRight：在右边设置图片，同理左边
+		如果需要设置下划线等，需要在Java代码中实现
+		可以设置html代码：Java代码中使用控件的setText()方法，参数为HTML.fromHtml()可以调用原生的Html代码
+	EditView：
+		用于放置可输入的文本控件
+		inputType：可以设置弹出的键盘，以指定输入的类型
